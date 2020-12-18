@@ -59,8 +59,10 @@ public class ORDS_API_DB_Test extends HR_ORDS_TestBase {
         Map<String,String> expectedResultMap =  DB_Utility.getRowMap(1) ;
 
         System.out.println("expectedResultMap = " + expectedResultMap);
-        // verify the actual result from api response match expected database result
 
+        // verify the actual result from api response match expected database result
+        assertThat(r3.getRegion_id()+"" ,  equalTo(expectedResultMap.get("REGION_ID") )  );
+        assertThat(r3.getRegion_name()  , is(expectedResultMap.get("REGION_NAME"))  );
 
     }
 
