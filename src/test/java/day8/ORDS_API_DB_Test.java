@@ -107,8 +107,31 @@ public class ORDS_API_DB_Test extends HR_ORDS_TestBase {
         assertThat(actualResultMap.get("region_name") ,
                 equalTo( expectedResultMap.get("REGION_NAME") ) );
 
-
-
     }
+
+    @DisplayName("Testing GET /regions/{region_id} Data Match Database Data With Just value by value")
+    @Test
+    public void testRegionDataFromResponseMatchDB_Data3() {
+        int myID = 3;
+        JsonPath jp = given()
+                .pathParam("region_id", myID).
+                        when()
+                .get("/regions/{region_id}").
+                        then()
+                .log().body()
+                .statusCode(200)
+                .extract()
+                .jsonPath();
+
+        String actualRegionId   = jp.getString("region_id") ;
+        String actualRegionName = jp.getString("region_name") ;
+        DB_Utility.runQuery("SELECT REGION_ID, REGION_NAME FROM REGIONS WHERE REGION_ID = "+ myID) ;
+        String expectedRegionId   = DB_Utility.getColumnDataAtRow(1,"REGION_ID") ;
+        String expectedRegionName = DB_Utility.getColumnDataAtRow(1,"REGION_NAME") ;
+        assertThat( actualRegionId , is(expectedRegionId ) );
+        assertThat( actualRegionName , equalTo(expectedRegionName ) );
+    }
+
+
 
 }
