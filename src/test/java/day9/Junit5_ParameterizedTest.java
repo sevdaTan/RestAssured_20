@@ -34,18 +34,30 @@ public class Junit5_ParameterizedTest {
         // endpoint is /us/{zipcode}
 
        given()
-       .baseUri("https://api.zippopotam.us")
-       .pathParam("zipcode" , 10000).
-               when()
+            .baseUri("https://api.zippopotam.us")
+            .pathParam("zipcode" , zip).
+       when()
                .get("/us/{zipcode}").
-               then()
+       then()
                .statusCode(200) ;
-
-
 
     }
 
+    @ParameterizedTest
+    @CsvFileSource(resources = "/country_zip.csv" , numLinesToSkip = 1)
+    public void testCountryZipCodeCombo(String csvCountry, int csvZip){
 
+        given()
+                .log().uri()
+                .baseUri("https://api.zippopotam.us")
+                .pathParam("country", csvCountry)
+                .pathParam("zipcode", csvZip).
+        when()
+                .get("/{country}/{zipcode}").
+         then()
+                .statusCode(200) ;
+
+    }
 
 
 }
