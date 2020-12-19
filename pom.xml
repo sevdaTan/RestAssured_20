@@ -65,12 +65,12 @@
             <version>1.0.2</version>
         </dependency>
 
-<!--        &lt;!&ndash;        This is the dependency for project lombok&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.projectlombok</groupId>-->
-<!--            <artifactId>lombok</artifactId>-->
-<!--            <version>1.18.12</version>-->
-<!--        </dependency>-->
+        <!--        This is the dependency for project lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
 
     </dependencies>
 
