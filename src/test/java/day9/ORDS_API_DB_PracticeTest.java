@@ -5,12 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pojo.Country;
 import testbase.HR_ORDS_TestBase;
-import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-import org.junit.jupiter.api.*;
-import pojo.BookCategory;
-import pojo.Region;
 
 import java.util.List;
 import java.util.Map;
@@ -51,9 +45,25 @@ import static org.hamcrest.MatcherAssert.assertThat;
         // save region_id from the map as number
         int expectedRegionId = Integer.parseInt(dbResultMap.get("REGION_ID"));
         assertThat(arPOJO.getRegion_id()    ,equalTo(   expectedRegionId   ) );
-
-
     }
+
+        @DisplayName("GET /countries Capture All CountryID and Compare Result with DB")
+        @Test
+        public void testResponseAllCountryIDsMatchDatabaseData(){
+
+            List<String> allCountriesIds =  get("/countries").jsonPath().getList("items.country_id");
+            allCountriesIds.forEach(System.out::println);
+
+            DB_Utility.runQuery("SELECT * FROM COUNTRIES");
+            List<String> expectedListFromDB = DB_Utility.getColumnDataAsList("COUNTRY_ID");
+            expectedListFromDB.forEach(System.out::println);
+            // assert both list has same information
+            assertThat(allCountriesIds , equalTo(expectedListFromDB)  );
+
+        }
+
+
+
 
 
 }
