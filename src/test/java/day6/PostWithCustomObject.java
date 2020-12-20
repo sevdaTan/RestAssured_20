@@ -1,10 +1,9 @@
 package day6;
 
-import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import io.restassured.http.ContentType;
-import Utility.ConfigurationReader;
-import Utility.SpartanUtil;
+import utility.ConfigurationReader;
+import utility.SpartanUtil;
 import pojo.Spartan;
 
 import static io.restassured.RestAssured.* ;

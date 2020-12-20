@@ -1,17 +1,14 @@
 package day7;
 
-import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import io.restassured.http.ContentType;
 import pojo.Spartan;
-import Utility.ConfigurationReader;
-import Utility.SpartanUtil;
+import utility.ConfigurationReader;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.* ;
-import static org.hamcrest.Matchers.* ;
 
 // serialization -->> java to text/ json
 // deserialization -->> json to  java

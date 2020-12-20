@@ -2,8 +2,8 @@ package testbase;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import Utility.ConfigurationReader;
-import Utility.DB_Utility;
+import utility.ConfigurationReader;
+import utility.DB_Utility;
 import static io.restassured.RestAssured.*;
 public abstract class HR_ORDS_TestBase {
     @BeforeAll
