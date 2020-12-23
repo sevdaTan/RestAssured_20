@@ -47,8 +47,7 @@
       "examples": [
         2877865902
       ],
-      "default": 0,
-      "pattern": "\\d{10}+"
+      "default": 0
     }
   }
 }

@@ -5,8 +5,10 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import utility.ConfigurationReader;
 import static io.restassured.RestAssured.*;
+
+
 public class SpartanAdminTestBase {
-    static RequestSpecification adminReqSpec ;
+    public static RequestSpecification adminReqSpec ;
     @BeforeAll
     public static void setUp() {
         baseURI = ConfigurationReader.getProperty("spartan.base_url");

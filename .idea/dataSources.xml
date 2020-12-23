@@ -8,5 +8,19 @@
       <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@18.234.99.157:1521:XE</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Hr" uuid="e07777b9-e8db-4dfa-8a2f-32be5ad1a899">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@54.82.212.232:1521:XE</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Spartan_DB" uuid="17862f1d-7475-4b48-abe2-6985c6c5864c">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@54.82.212.232:1521:XE</jdbc-url>
+    </data-source>
   </component>
 </project>
