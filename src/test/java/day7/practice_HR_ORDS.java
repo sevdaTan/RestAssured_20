@@ -131,11 +131,6 @@ public class practice_HR_ORDS {
         JsonPath jp = response.jsonPath() ;
         Employees employee = jp.getObject("",Employees.class);
         System.out.println("employee = " + employee);
-
-
-
-
-
     }
 
 }

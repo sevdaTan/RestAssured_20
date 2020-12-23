@@ -1,12 +1,11 @@
 package day5;
 
-import Utility.ConfigurationReader;
-import io.restassured.path.json.JsonPath;
+import utility.ConfigurationReader;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import java.util.List;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;

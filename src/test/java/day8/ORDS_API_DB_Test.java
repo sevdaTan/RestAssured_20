@@ -5,15 +5,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pojo.Region;
 import testbase.HR_ORDS_TestBase;
-import Utility.DB_Utility;
+import utility.DB_Utility;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import pojo.Country;
-import testbase.HR_ORDS_TestBase;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import java.util.List;
+
 import java.util.Map;
 
 import static io.restassured.RestAssured.*;

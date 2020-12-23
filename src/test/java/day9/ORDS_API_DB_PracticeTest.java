@@ -1,6 +1,6 @@
 package day9;
 
-import Utility.DB_Utility;
+import utility.DB_Utility;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pojo.Country;
@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 

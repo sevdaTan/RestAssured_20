@@ -1,12 +1,12 @@
 package day5;
 
 import io.restassured.http.ContentType;
-import Utility.ConfigurationReader;
+import utility.ConfigurationReader;
 import org.junit.jupiter.api.*;
 import static io.restassured.RestAssured.* ;
 import static org.hamcrest.Matchers.* ;
 import org.junit.jupiter.api.DisplayName;
-import Utility.SpartanUtil;
+import utility.SpartanUtil;
 import java.util.Map;
 @TestMethodOrder(MethodOrderer.DisplayName.class)
 public class Spartan_E2E_HappyPath {

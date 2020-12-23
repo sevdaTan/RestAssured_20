@@ -1,21 +1,15 @@
 package day6;
 
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.*;
-import io.restassured.http.ContentType;
-import Utility.ConfigurationReader;
-import Utility.SpartanUtil;
-import org.w3c.dom.stylesheets.LinkStyle;
-import pojo.Spartan;
+import utility.ConfigurationReader;
 import pojo.SpartanRead;
 
 import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.* ;
-import static org.hamcrest.Matchers.* ;
 
 
 public class JsonToJavaObject {
