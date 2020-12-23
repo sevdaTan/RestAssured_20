@@ -1,4 +1,4 @@
-package day10;
+package day_10;
 
 import io.restassured.RestAssured;
 import io.restassured.filter.log.LogDetail;

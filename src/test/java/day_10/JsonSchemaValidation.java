@@ -1,4 +1,4 @@
-package day10;
+package day_10;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
