@@ -33,9 +33,9 @@ public class OpenMovieDB {
         given()
                 .queryParam("apikey", "3309a0be")
                 .queryParam("t", "The Grinch").
-                when()
+        when()
                 .get().
-                then()
+        then()
                 .statusCode(is(200))
                 .contentType(ContentType.JSON)
                 .body("Title", is("The Grinch"))
